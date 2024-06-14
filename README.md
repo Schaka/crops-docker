@@ -6,7 +6,7 @@ This can be done via docker-compose, Unraid or a simple Linux CLI command.
 
 ### Simple start
 ```sh
-docker run ghcr.io/schaka/crops-docker:latest "python main.py"
+docker run ghcr.io/schaka/crops-docker-resu:latest "python main.py"
 ```
 
 ### Config file
