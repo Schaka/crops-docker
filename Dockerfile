@@ -7,11 +7,10 @@ COPY startup.sh /app
 RUN chmod +x /app/startup.sh
 
 RUN apk update && \
-    apk add unzip && \
-    wget -c https://github.com/soranosita/crops/archive/refs/tags/v1.1.0.zip
+    apk add git && \
+    git clone https://github.com/resu-detcader/crops.git
 
-RUN unzip '*.zip'
-RUN mv crops*/** /app && mv /app/src/** /app && rm -r /app/src && rm *.zip
+RUN mv crops*/** /app && mv /app/src/** /app && rm -r /app/src
 
 WORKDIR /app
 RUN rm settings.json
