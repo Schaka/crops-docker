@@ -3,6 +3,9 @@ FROM python:3.8-alpine3.20
 RUN mkdir /app && mkdir /config
 ENV HOME=/config
 
+COPY startup.sh /app
+RUN chmod +x /app/startup.sh
+
 RUN apk update && \
     apk add unzip && \
     wget -c https://github.com/soranosita/crops/archive/refs/tags/v1.1.0.zip
@@ -14,4 +17,4 @@ WORKDIR /app
 RUN rm settings.json
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["ln -sf /config/settings.json /app/settings.json", "/bin/sh", "-c"]
+ENTRYPOINT ["/app/startup.sh"]
