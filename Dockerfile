@@ -11,7 +11,7 @@ RUN unzip '*.zip'
 RUN mv crops*/** /app && mv /app/src/** /app && rm -r /app/src && rm *.zip
 
 WORKDIR /app
-RUN rm settings.json && ln /config/settings.json settings.json
+RUN rm settings.json
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["/bin/sh", "-c"]
+ENTRYPOINT ["ln -sf /config/settings.json /app/settings.json", "/bin/sh", "-c"]
