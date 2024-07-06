@@ -10,7 +10,7 @@ docker run ghcr.io/schaka/crops-docker:latest "python main.py"
 ```
 
 ### Config file
-`$HOME` is mapped to `/config`. The image contains a symlink from `/config/settings.json` to `/app/settings.json`.
+`$HOME` is mapped to `/config`. The image creates a symlink from `/config/settings.json` to `/app/settings.json` inside its `startup.sh`.
 Grab the [settings file](https://github.com/soranosita/crops/blob/main/src/settings.json) and map it into the container as `/config/settings.json`.
 
 ### Run command
@@ -18,7 +18,7 @@ As per docs, the command work as follows:
 `python main.py [-h] -i FOLDER_IN -o FOLDER_OUT (--ops-to-red | --red-to-ops) [--pth] [--download]`
 
 For Unraid:
-- Extra Parameters: `--user 99:100`
+- ~Extra Parameters: `--user 99:100`~ currently only works as root, otherwise symlink can't be created
 - Post Arguments: `"python main.py -i /torrents-in -o /data/torrent-watch --ops-to-red"` (yes, with double quotes)
 
 See this config example screenshot where:
