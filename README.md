@@ -19,7 +19,7 @@ As per docs, the command work as follows:
 
 For Unraid:
 - Extra Parameters: `--user 99:100`
-- Post Arguments: `"python main.py"` (yes, with double quotes)
+- Post Arguments: `"python main.py -i /torrents-in -o /data/torrent-watch --ops-to-red"` (yes, with double quotes)
 
 See this config example screenshot where:
 - Post arguments is `"python main.py [-h] -i FOLDER_IN -o FOLDER_OUT (--ops-to-red | --red-to-ops) [--pth] [--download]"`
