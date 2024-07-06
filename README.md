@@ -10,7 +10,7 @@ docker run ghcr.io/schaka/crops-docker:latest "python main.py"
 ```
 
 ### Config file
-`$HOME` is mapped to `/config`. The image contains a hardlink from `/config/settings.json` to `/app/settings.json`.
+`$HOME` is mapped to `/config`. The image contains a symlink from `/config/settings.json` to `/app/settings.json`.
 Grab the [settings file](https://github.com/soranosita/crops/blob/main/src/settings.json) and map it into the container as `/config/settings.json`.
 
 ### Run command
