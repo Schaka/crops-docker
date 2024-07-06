@@ -23,6 +23,8 @@ For Unraid:
 
 See this config example screenshot where:
 - Post arguments is `"python main.py [-h] -i FOLDER_IN -o FOLDER_OUT (--ops-to-red | --red-to-ops) [--pth] [--download]"`
-- a `settings.json` is mapped into  `/config/setting.json` 
+- a `settings.json` is mapped into  `/config/setting.json`
+- a `/data` dir to point towards for outputting `.torrent` files
+- a `/torrent-in` dir, pointing to qbit's BT_backup to use as `FOLDER_IN`
 
-![unraid](docs/uraid.png)
+![unraid](docs/unraid.png)
