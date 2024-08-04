@@ -9,7 +9,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: "${{ github.repository }}-resu"
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   docker:
@@ -33,6 +33,6 @@ jobs:
           push: true
           tags: |
             ghcr.io/schaka/crops-docker:${{ github.sha }}
-            ghcr.io/schaka/crops-docker:latest
+            ghcr.io/schaka/crops-docker:resu
           secrets: |
             "github_token=${{ secrets.GITHUB_TOKEN }}"
