@@ -1,3 +1,7 @@
+# Abandoned as of 04-08-2024
+There are superior respositories out there in the form of both [kieraneglin's repo](https://github.com/kieraneglin/crops-docker) and **especially [Fertilizer](https://github.com/moleculekayak/fertilizer)** which is the spiritual successor of crops.
+I recommend following either of these, as my image was just a quick and dirty solution to get it up and running.
+
 # Docker image for crops
 All I do is provide an Alpine based docker image for [crops](https://github.com/soranosita/crops).
 The actual software does not change and you still have to supply the CLI commands yourself.
